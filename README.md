@@ -24,13 +24,59 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 ### Introduction to Circuit Design and SPICE simulations ###
     
 - L1 Why do we need SPICE simulations?
-    
-- L2 Introduction to basic element in Circuit design – NMOS	
+
+  <img width="1005" height="694" alt="image" src="https://github.com/user-attachments/assets/9e6f5f1d-acd9-41bb-b17b-2ab56a2c7949" />
+
+
+  <img width="1425" height="940" alt="image" src="https://github.com/user-attachments/assets/7b2639e7-5e85-4db1-923e-881f9306c85f" />
+
+
+  <img width="1809" height="934" alt="image" src="https://github.com/user-attachments/assets/fa2b335c-e986-491f-b35c-4c90a9b946f0" />
   
-- L3 Strong inversion and threshold voltage	
-   
+
+  <img width="1783" height="854" alt="image" src="https://github.com/user-attachments/assets/045d766e-ffd6-4603-814c-e72da1b8e97d" />
+
+  
+- L2 Introduction to basic element in Circuit design – NMOS
+
+<img width="1640" height="693" alt="image" src="https://github.com/user-attachments/assets/504dc4ac-501d-46bc-bcdf-b4803ce765f1" />
+
+
+<img width="1796" height="843" alt="image" src="https://github.com/user-attachments/assets/4a2b07d5-41fa-4d0f-8ab0-1e1bdc3087cd" />
+
+
+<img width="1792" height="842" alt="image" src="https://github.com/user-attachments/assets/ae94c9b3-623f-49a1-bf57-3cbc145b2dd8" />
+
+
+- L3 Strong inversion and threshold voltage
+
+<img width="1792" height="842" alt="image" src="https://github.com/user-attachments/assets/161f760f-5bfe-48a1-90e5-63f95d3bd903" />
+
+
+<img width="1962" height="751" alt="image" src="https://github.com/user-attachments/assets/e42d18c3-4e4c-4ed4-bc7c-5a69278058dd" />
+
+
+<img width="1962" height="751" alt="image" src="https://github.com/user-attachments/assets/bb97050c-5569-494c-9e8f-78d3ace27b85" />
+
+
+<img width="1837" height="843" alt="image" src="https://github.com/user-attachments/assets/04355acb-8a45-4a56-b9b5-b12e9e0c87a3" />
+
+
+<img width="1701" height="844" alt="image" src="https://github.com/user-attachments/assets/2af88005-3543-4eb4-9897-2590d7876ddd" />
+
+<img width="1710" height="828" alt="image" src="https://github.com/user-attachments/assets/70f222c4-c63b-400e-aa56-241fab6c61e4" />
+
+<img width="1704" height="824" alt="image" src="https://github.com/user-attachments/assets/d6b89001-627d-4c45-bf0f-50bd8a733792" />
+
+<img width="1796" height="844" alt="image" src="https://github.com/user-attachments/assets/6e5e4d55-4706-4c58-a9d3-0bbd0d570e05" />
+
+
+<img width="1914" height="926" alt="image" src="https://github.com/user-attachments/assets/bf9a9287-dc70-484c-afda-51883b5d8687" />
+
 - L4 Threshold voltage with positive substrate potential
 
+<img width="1826" height="874" alt="image" src="https://github.com/user-attachments/assets/e2225b29-23c5-44ab-b755-1ca8b1f3f0df" />
+ 
  </details>  
 
 <details>			
@@ -39,8 +85,22 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 ### NMOS resistive region and saturation region of operation
 
 - L1 Resistive region of operation with small drain-source voltage
+
+<img width="1870" height="839" alt="image" src="https://github.com/user-attachments/assets/dd7b9b01-34bf-4b4d-87e4-a09fdd3ecf95" />
+
   
 - L2 Drift current theory
+
+  <img width="1846" height="844" alt="image" src="https://github.com/user-attachments/assets/1084f4e9-1165-4e0b-9911-5ac06fd62210" />
+
+  <img width="1897" height="842" alt="image" src="https://github.com/user-attachments/assets/c3b5b71e-9384-421c-835f-6a3bc39689aa" />
+
+  <img width="1793" height="924" alt="image" src="https://github.com/user-attachments/assets/4a8c0e54-123c-4c55-9798-b72ccb6f872d" />
+
+  
+
+
+
   
 - L3 Drain current model for linear region of operation
   
