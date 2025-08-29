@@ -73,6 +73,7 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 
 ## NgspiceSky130 - Day 2 - Velocity saturation and basics of CMOS inverter VTC	
 ------------------------------------------------------------
+
 <details>
 <summary>SPICE simulation for lower nodes and velocity saturation effect</summary>
   
@@ -94,22 +95,26 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 <details>
 <summary>CMOS voltage transfer characteristics (VTC)</summary>
 
-<details>
-<summary>CMOS voltage transfer characteristics (VTC)</summary>
-  
 ###	CMOS voltage transfer characteristics (VTC)
 
 - L1 MOSFET as a switch
+
 - L2 Introduction to standard MOS voltage current parameters
+
 - L3 PMOS/NMOS drain current v/s drain voltage
+
 - L4 Step1 – Convert PMOS gate-source-voltage to Vin
+
 - L5 Step2 & Step3 – Convert PMOS and NMOS drain-source-voltage to vout
+
 - L6 Step4 – Merge PMOS – NMOS load curves and plot VTC
 
 </details>
+
 ----------------------------------------
-NgspiceSky130 - Day 3 - CMOS Switching threshold and dynamic simulations
+## NgspiceSky130 - Day 3 - CMOS Switching threshold and dynamic simulations
 ----------------------------------------
+
 <details>
 <summary>Voltage transfer characteristics – SPICE simulations</summary>
   
@@ -124,13 +129,21 @@ NgspiceSky130 - Day 3 - CMOS Switching threshold and dynamic simulations
 </details>
 
 <details>
-<summary>
- Static behavior evaluation – CMOS inverter robustness – Switching Threshold	
-		3-L1 Switching Threshold, Vm
-		L2 Analytical expression of Vm as a function of (W/L)p and (W/L)n
-		L3 Analytical expression of (W/L)p and (W/L)n as a function of Vm
-		L4 Static and dynamic simulation of CMOS inverter
-		L5 Static and dynamic simulation of CMOS inverter with increased PMOS width
-		L6 Applications of CMOS inverter in clock network and STA
+<summary>Static behavior evaluation – CMOS inverter robustness – Switching Threshold</summary>
+	
+### Static behavior evaluation – CMOS inverter robustness – Switching Threshold
+	
+- L1 Switching Threshold, Vm
 
+- L2 Analytical expression of Vm as a function of (W/L)p and (W/L)n
+
+- L3 Analytical expression of (W/L)p and (W/L)n as a function of Vm
+
+- L4 Static and dynamic simulation of CMOS inverter
+
+- L5 Static and dynamic simulation of CMOS inverter with increased PMOS width
+
+- L6 Applications of CMOS inverter in clock network and STA
+
+</details>
 
