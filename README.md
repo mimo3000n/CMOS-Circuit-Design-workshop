@@ -183,6 +183,8 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 
 - L3 Sky130 Supply Variation Labs
 
+</details>
+
 <details>
 <summary>Static behavior evaluation – CMOS inverter robustness – Device variation</summary>
 	
