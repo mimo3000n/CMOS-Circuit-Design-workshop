@@ -147,3 +147,55 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 
 </details>
 
+-------------------------------
+## NgspiceSky130 - Day 4 - CMOS Noise Margin robustness evaluation
+-------------------------------
+
+<details>
+<summary>Static behavior evaluation – CMOS inverter robustness – Noise margin</summary>
+	
+### Static behavior evaluation – CMOS inverter robustness – Noise margin	
+
+- L1 Introduction to noise margin
+
+- L2 Noise margin voltage parameters
+
+- L3 Noise margin equation and summary
+
+- L4 Noise margin variation with respect to PMOS width
+
+- L5 Sky130 Noise margin labs
+
+</details>
+
+----------------------------------
+## NgspiceSky130 - Day 5 - CMOS power supply and device variation robustness evaluation
+----------------------------------
+
+<details>
+<summary>Static behavior evaluation – CMOS inverter robustness – Power supply variation</summary>
+	
+### Static behavior evaluation – CMOS inverter robustness – Power supply variation
+
+- L1 Smart SPICE simulation for power supply variations
+
+- L2 Advantages and disadvantages using low supply voltage
+
+- L3 Sky130 Supply Variation Labs
+
+<details>
+<summary>Static behavior evaluation – CMOS inverter robustness – Device variation</summary>
+	
+### Static behavior evaluation – CMOS inverter robustness – Device variation	
+
+- L1 Sources of variation – Etching process
+
+- L2 Sources of variation – oxide thickness
+
+- L3 Smart SPICE simulation for device variations
+
+- L4 Conclusion
+
+- L5 Sky130 Device Variation Labs
+
+</details>
