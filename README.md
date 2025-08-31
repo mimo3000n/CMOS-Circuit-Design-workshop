@@ -124,7 +124,179 @@ Graduates emerge ready to contribute immediately to low‑power IoT nodes, autom
 - L3 Define technology parameters
      
 - L4 First SPICE simulation
-     
+
+enter following command to clone repository:
+
+git clone https://github.com/kunalg123/sky130CircuitDesignWorkshop.git
+ 
+ <img width="893" height="218" alt="image" src="https://github.com/user-attachments/assets/3daa0f57-a4b8-4e61-8dab-8fadbf1c1eb8" />
+
+goto "~/sky130CircuitDesignWorkshop/design"
+
+<img width="1068" height="277" alt="image" src="https://github.com/user-attachments/assets/98a0d853-f0ba-4808-b7f7-3db1cea335b0" />
+
+cell definition which wer use in our workshop are in "~/sky130CircuitDesignWorkshop/design/sky130_fd_pr/cells".
+
+nfet_01v8 - NMOS
+pfet_01v8 - PMOS
+
+<img width="741" height="142" alt="image" src="https://github.com/user-attachments/assets/6c827099-482c-4f19-a0b1-bb63989c3b00" />
+
+if we go to "nfet_01v8" and do an ls we have all lib files for different corners.
+
+<img width="1250" height="171" alt="image" src="https://github.com/user-attachments/assets/6e6ce39e-adc8-48ac-bd4e-24a4246fa7a8" />
+
+file "sky130_fd_pr__nfet_01v8__tt.pm3.spice" contain different model parameters.
+
+``` spice
+* Copyright 2020 The SkyWater PDK Authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     https://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+
+* SKY130 Spice File.
+* Number of bins: 63
+.param
++ sky130_fd_pr__nfet_01v8__toxe_mult = 1.0
++ sky130_fd_pr__nfet_01v8__rshn_mult = 1.0
++ sky130_fd_pr__nfet_01v8__overlap_mult = 0.9642
++ sky130_fd_pr__nfet_01v8__lint_diff = 0.0
++ sky130_fd_pr__nfet_01v8__wint_diff = 0.0
++ sky130_fd_pr__nfet_01v8__dlc_diff = -.61492e-9
++ sky130_fd_pr__nfet_01v8__dwc_diff = 0.0
+*
+* sky130_fd_pr__nfet_01v8, Bin 000, W = 1.26, L = 0.15
+* -----------------------------------
++ sky130_fd_pr__nfet_01v8__voff_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__kt1_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__ub_diff_0 = -1.1675e-19
++ sky130_fd_pr__nfet_01v8__pditsd_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__ua_diff_0 = 1.3935e-11
++ sky130_fd_pr__nfet_01v8__vsat_diff_0 = 594.41
++ sky130_fd_pr__nfet_01v8__tvoff_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__ags_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__a0_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__b0_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__pclm_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__pdits_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__keta_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__rdsw_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__k2_diff_0 = 0.0031843
++ sky130_fd_pr__nfet_01v8__vth0_diff_0 = -0.024441
++ sky130_fd_pr__nfet_01v8__nfactor_diff_0 = 0.37668
++ sky130_fd_pr__nfet_01v8__u0_diff_0 = -0.0034894
++ sky130_fd_pr__nfet_01v8__eta0_diff_0 = 0.0
+........
+
+```
+
+file "sky130_fd_pr__nfet_01v8__tt.corner.spice" contein different L andW parameters
+
+``` spice
+* Copyright 2020 The SkyWater PDK Authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     https://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+
+* SKY130 Spice File.
+* Number of bins: 63
+.param
++ sky130_fd_pr__nfet_01v8__toxe_mult = 1.0
++ sky130_fd_pr__nfet_01v8__rshn_mult = 1.0
++ sky130_fd_pr__nfet_01v8__overlap_mult = 0.9642
++ sky130_fd_pr__nfet_01v8__lint_diff = 0.0
++ sky130_fd_pr__nfet_01v8__wint_diff = 0.0
++ sky130_fd_pr__nfet_01v8__dlc_diff = -.61492e-9
++ sky130_fd_pr__nfet_01v8__dwc_diff = 0.0
+*
+* sky130_fd_pr__nfet_01v8, Bin 000, W = 1.26, L = 0.15
+* -----------------------------------
++ sky130_fd_pr__nfet_01v8__voff_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__kt1_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__ub_diff_0 = -1.1675e-19
++ sky130_fd_pr__nfet_01v8__pditsd_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__ua_diff_0 = 1.3935e-11
++ sky130_fd_pr__nfet_01v8__vsat_diff_0 = 594.41
++ sky130_fd_pr__nfet_01v8__tvoff_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__ags_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__a0_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__b0_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__pclm_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__pdits_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__keta_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__rdsw_diff_0 = 0.0
++ sky130_fd_pr__nfet_01v8__k2_diff_0 = 0.0031843
++ sky130_fd_pr__nfet_01v8__vth0_diff_0 = -0.024441
++ sky130_fd_pr__nfet_01v8__nfactor_diff_0 = 0.37668
++ sky130_fd_pr__nfet_01v8__u0_diff_0 = -0.0034894
++ sky130_fd_pr__nfet_01v8__eta0_diff_0 = 0.0
+
+* sky130_fd_pr__nfet_01v8, Bin 001, W = 1.68, L = 0.15
+* -----------------------------------
++ sky130_fd_pr__nfet_01v8__eta0_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__b1_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__voff_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__kt1_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__ub_diff_1 = -1.6979e-19
++ sky130_fd_pr__nfet_01v8__pditsd_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__ua_diff_1 = 1.0381e-11
++ sky130_fd_pr__nfet_01v8__vsat_diff_1 = 249.83
++ sky130_fd_pr__nfet_01v8__tvoff_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__ags_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__a0_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__b0_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__pclm_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__pdits_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__keta_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__rdsw_diff_1 = 0.0
++ sky130_fd_pr__nfet_01v8__k2_diff_1 = 0.0047171
++ sky130_fd_pr__nfet_01v8__vth0_diff_1 = 0.0064909
++ sky130_fd_pr__nfet_01v8__nfactor_diff_1 = 0.31936
++ sky130_fd_pr__nfet_01v8__u0_diff_1 = -0.002698
+*
+* sky130_fd_pr__nfet_01v8, Bin 002, W = 1.0, L = 1.0
+* ---------------------------------
++ sky130_fd_pr__nfet_01v8__nfactor_diff_2 = 1.11
++ sky130_fd_pr__nfet_01v8__u0_diff_2 = -9.2293e-5
++ sky130_fd_pr__nfet_01v8__vth0_diff_2 = 0.0065633
++ sky130_fd_pr__nfet_01v8__eta0_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__b1_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__voff_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__ub_diff_2 = 1.6548e-19
++ sky130_fd_pr__nfet_01v8__kt1_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__pditsd_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__ua_diff_2 = 4.5462e-13
++ sky130_fd_pr__nfet_01v8__vsat_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__tvoff_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__ags_diff_2 = -0.052872
++ sky130_fd_pr__nfet_01v8__a0_diff_2 = 0.23412
++ sky130_fd_pr__nfet_01v8__b0_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__pclm_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__pdits_diff_2 = 0.0
++ sky130_fd_pr__nfet_01v8__keta_diff_2 = 0.0
+*
+.......
+
+```
+ 
 - L5 SPICE Lab with sky130 models
     
  </details> 
