@@ -296,7 +296,96 @@ file "sky130_fd_pr__nfet_01v8__tt.corner.spice" contein different L andW paramet
 .......
 
 ```
- 
+in design folder i created a spice file with L=0.25 and W=0.65 and run spice simulation.
+
+run:
+ngspice day1_nfet_idvds_L025_W065.spice
+
+``` cmd
+vsduser@vsduser:~/sky130CircuitDesignWorkshop/design$ ngspice day1_nfet_idvds_L025_W065.spice
+******
+** ngspice-44+ : Circuit level simulation program
+** Compiled with KLU Direct Linear Solver
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2024, The ngspice team.
+** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Thu Jul 17 12:48:03 UTC 2025
+******
+
+Note: No compatibility mode selected!
+
+
+Circuit: *model description
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+ Reference value :  1.70000e+00
+No. of Data Rows : 190
+
+No. of Data Rows : 1
+Here are the vectors currently active:
+
+Title: *model description
+Name: op1 (Operating Point)
+Date: Tue Sep  2 20:31:35  2025
+
+    in                  : voltage, real, 1 long
+    m.xm1.msky130_fd_pr__nfet_01v8#body: voltage, real, 1 long
+    m.xm1.msky130_fd_pr__nfet_01v8#dbody: voltage, real, 1 long
+    m.xm1.msky130_fd_pr__nfet_01v8#sbody: voltage, real, 1 long
+    n1                  : voltage, real, 1 long
+    vdd                 : voltage, real, 1 long [default scale]
+    vdd#branch          : current, real, 1 long
+    vin#branch          : current, real, 1 long
+ngspice 22 -> 
+ngspice 23 -> 
+
+
+```
+
+<img width="936" height="749" alt="image" src="https://github.com/user-attachments/assets/2cafd8c1-1f55-40d2-9b7c-69e1e4b2951b" />
+
+
+now plot vdd over vin
+
+``` cmd
+
+.......
+    vdd                 : voltage, real, 1 long [default scale]
+    vdd#branch          : current, real, 1 long
+    vin#branch          : current, real, 1 long
+ngspice 20 -> plot -vdd#branch
+ngspice 21 -> 
+
+
+```
+
+will bring up this grapth
+
+
+check lenght at 1,6V curve with Vin of 1,2V
+
+<img width="1325" height="924" alt="image" src="https://github.com/user-attachments/assets/2c11b9ae-36bb-4299-a77b-f76e69e84f52" />
+
+where y0 is 0.000177018 = 177 microns
+
+``` cmd
+
+ngspice 21 -> 
+x0 = 1.2, y0 = 0.000177018
+
+```
+
+<img width="392" height="219" alt="image" src="https://github.com/user-attachments/assets/ce9c7be5-916c-413a-b464-a692129883b8" />
+
+
+
+
+
+
 - L5 SPICE Lab with sky130 models
     
  </details> 
