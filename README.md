@@ -450,9 +450,118 @@ x0 = 1.3, y0 = 0.000279104
 
 - L4 Velocity saturation drain current model
 
-- L5 Labs Sky130 Id-Vgs
+- **L5 Labs Sky130 Id-Vgs**
 
-- L6 Labs Sky130 Vt
+doing simulation with sweeping Vdd and Vin
+
+```spice
+Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+
+
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
+
+R1 n1 in 55
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+.dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+.control
+
+run
+display
+setplot dc1
+.endc
+
+.end
+
+```
+
+running ngspice and plot curve:
+
+<img width="1654" height="833" alt="image" src="https://github.com/user-attachments/assets/58908838-dc5e-4855-932e-a9d1c20210d0" />
+
+
+for lower values of Vgs ist showing "qudratic" behavior", for higher values of Vgs ist showing "linar" behavior!
+
+<img width="768" height="993" alt="image" src="https://github.com/user-attachments/assets/39da3d71-4bc8-4f57-90fb-df2e5d01b1df" />
+
+x0 = 1.80056, y0 = 0.000197836
+
+at 1,8V max Id is at 197.8 u
+
+next we keep Vdd constant at 1.8V and sweeping Vin
+
+``` spice
+
+Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
+
+R1 n1 in 55
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+.dc Vin 0 1.8 0.1 
+
+.control
+
+run
+display
+setplot dc1
+.endc
+
+.end
+
+
+```
+
+simulation show one plot
+
+
+<img width="1859" height="846" alt="image" src="https://github.com/user-attachments/assets/3d8fb0b5-da9a-4109-a235-2f44e10d1bbd" />
+
+curve is showing "linear" behavior
+
+
+- **L6 Labs Sky130 Vt**
+
+calculate Vt  for Id vs Vgs
+
+start simulation with "ngspice day2_nfet_idvgs_L015_W039.spice"
+
+
+plot vdd#branch, put a tangent on linear part until x-axis,it get around 0.77V as Vt
+
+
+<img width="1403" height="877" alt="image" src="https://github.com/user-attachments/assets/90e66454-4110-49e5-8958-b1ff059d2b17" />
+
+  
 </details>
 
 <details>
