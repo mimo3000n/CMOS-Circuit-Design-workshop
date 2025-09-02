@@ -363,7 +363,9 @@ ngspice 21 ->
 
 ```
 
-will bring up this grapth
+will bring up this graph
+
+<img width="1605" height="822" alt="image" src="https://github.com/user-attachments/assets/ffb7650b-cf0f-4a91-9498-c2585a2a86f3" />
 
 
 check lenght at 1,6V curve with Vin of 1,2V
@@ -386,7 +388,11 @@ x0 = 1.2, y0 = 0.000177018
 
 
 
+
+
 - L5 SPICE Lab with sky130 models
+
+- 
     
  </details> 
 
