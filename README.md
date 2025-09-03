@@ -596,7 +596,76 @@ plot vdd#branch, put a tangent on linear part until x-axis,it get around 0.77V a
 
 - L2 SPICE simulation for CMOS inverter
 
-- L3 Labs Sky130 SPICE simulation for CMOS
+- **L3 Labs Sky130 SPICE simulation for CMOS**
+
+plot Vtc characteristic of a CMOS inverter
+
+do simulation and find out switching voltage.
+
+run "ngspice day3_inv_vtc_Wp084_Wn036.spice"
+
+``` ngspice
+vsduser@vsduser:~/sky130CircuitDesignWorkshop/design$ ngspice day3_inv_vtc_Wp084_Wn036.spice
+******
+** ngspice-44+ : Circuit level simulation program
+** Compiled with KLU Direct Linear Solver
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2024, The ngspice team.
+** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Thu Jul 17 12:48:03 UTC 2025
+******
+
+Note: No compatibility mode selected!
+
+
+Circuit: *model description
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+ Reference value :  1.48000e+00
+No. of Data Rows : 181
+
+No. of Data Rows : 1
+Here are the vectors currently active:
+
+Title: *model description
+Name: dc1 (DC transfer characteristic)
+Date: Tue Sep  2 22:11:57  2025
+
+    in                  : voltage, real, 181 long
+    m.xm1.msky130_fd_pr__pfet_01v8#body: voltage, real, 181 long
+    m.xm1.msky130_fd_pr__pfet_01v8#dbody: voltage, real, 181 long
+    m.xm1.msky130_fd_pr__pfet_01v8#sbody: voltage, real, 181 long
+    m.xm2.msky130_fd_pr__nfet_01v8#body: voltage, real, 181 long
+    m.xm2.msky130_fd_pr__nfet_01v8#dbody: voltage, real, 181 long
+    m.xm2.msky130_fd_pr__nfet_01v8#sbody: voltage, real, 181 long
+    out                 : voltage, real, 181 long
+    v-sweep             : voltage, real, 181 long [default scale]
+    vdd                 : voltage, real, 181 long
+    vdd#branch          : current, real, 181 long
+    vin#branch          : current, real, 181 long
+ngspice 31 -> 
+
+```
+
+do the plot.
+
+ngspice -> plot out vsin
+
+<img width="1204" height="834" alt="image" src="https://github.com/user-attachments/assets/69b20395-6943-4ec8-ad14-147b81813489" />
+
+
+Vtc ist around 0.87 V
+
+next we do transient analysis calculation rise and fall delay:
+
+
+
+
+
 
 </details>
 
