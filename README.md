@@ -786,7 +786,76 @@ thats the way to calculate rise & fall delay in transient analyisis.
 
 - L4 Noise margin variation with respect to PMOS width
 
-- L5 Sky130 Noise margin labs
+- **L5 Sky130 Noise margin labs**
+
+we plot noise margin:
+
+we use spice file "day4_inv_noisemargin_wp1_wn036.spice"
+
+``` spice
+
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+
+```
+
+run simulation:
+
+<img width="1016" height="879" alt="image" src="https://github.com/user-attachments/assets/9e03e2b7-e16d-478c-b3c2-b9a3339d3a1c" />
+
+now "plot out vs in"in ngspice
+
+ngspice 36 -> plot out vs in
+ngspice 37 -> 
+x0 = 0.777333, y0 = 1.6975
+
+x0 = 0.977333, y0 = 0.1075
+
+
+for noisemargin high we have to calculate 
+
+1.697 - 0.977 = 0,72V
+
+noisemargin low will be:
+
+0.777 - 0.1075 = 0.6695 V
+
+
+
+
+
+
 
 </details>
 
