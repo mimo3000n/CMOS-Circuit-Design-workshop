@@ -657,15 +657,96 @@ ngspice -> plot out vsin
 
 <img width="1204" height="834" alt="image" src="https://github.com/user-attachments/assets/69b20395-6943-4ec8-ad14-147b81813489" />
 
+We are looking for switching threshold!
 
-Vtc ist around 0.87 V
+Vtc ist around 0.876 V
 
 next we do transient analysis calculation rise and fall delay:
 
+spice file that we use "day3_inv_tran_Wp084_Wn036.spice"
+
+```spice
+*Model Description
+.param temp=27
 
 
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
 
 
+*Netlist Description
+
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 PULSE(0V 1.8V 0 0.1ns 0.1ns 2ns 4ns)
+
+*simulation commands
+
+.tran 1n 10n
+
+.control
+run
+.endc
+
+.end
+
+```
+let run spice simulation:
+
+<img width="1000" height="841" alt="image" src="https://github.com/user-attachments/assets/fd8258a5-dd55-429f-8dc6-b6901efb1e6a" />
+
+now we "plot out vs time in"
+
+<img width="1272" height="930" alt="image" src="https://github.com/user-attachments/assets/cac13a60-0337-4bb9-a9c5-d739df073423" />
+
+we calculate raise an fall delay of inverter.It will be arounf 0.9V.
+
+we zoom in and click on red and blue curve at 0.9V
+
+we get following points:
+
+``` spice
+
+ngspice 34 -> 
+x0 = 2.48314e-09, y0 = 0.899474
+
+x0 = 2.15058e-09, y0 = 0.898947
+
+
+```
+
+
+<img width="1318" height="885" alt="image" src="https://github.com/user-attachments/assets/8e0947fd-873c-47e0-89ef-13e6c7cbdffb" />
+
+calculation of risedelay:
+
+2.483 - 2.151 = 0.332 ps
+
+lets do same for fall delay:
+
+<img width="1316" height="920" alt="image" src="https://github.com/user-attachments/assets/aa101201-9f34-43c2-a2db-927f50272b53" />
+
+
+``` spice
+
+ngspice 34 -> 
+x0 = 4.33469e-09, y0 = 0.899545
+
+x0 = 4.05102e-09, y0 = 0.899091
+
+```
+
+falldelay: 
+4.334 - 4.051 = 0.283 ns
+
+
+thats the way to calculate rise & fall delay in transient analyisis.
 
 </details>
 
