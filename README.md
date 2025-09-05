@@ -876,9 +876,9 @@ noisemargin low will be:
 
 - **L3 Sky130 Supply Variation Labs**
 
-  now wecalculate supply variation with spice file "day5_inv_supplyvariation_Wp1_Wn036.spice"
+  now we calculate supply variation with spice file "day5_inv_supplyvariation_Wp1_Wn036.spice"
 
-  ``` spice
+``` spice
 
 Model Description
 .param temp=27
@@ -918,11 +918,33 @@ plot dc1.out vs in dc2.out vs in dc3.out vs in dc4.out vs in dc5.out vs in dc6.o
 
 .end
 
-  ```
+```
 
 
 run spice simulation
 
+<img width="1368" height="988" alt="image" src="https://github.com/user-attachments/assets/b323a335-eb4f-44ad-b8aa-733793c647e7" />
+
+plot:
+
+Vdc curve for different volatges
+
+<img width="1777" height="992" alt="image" src="https://github.com/user-attachments/assets/4096d866-8899-4851-ae17-55301eea577e" />
+
+lets calculate gain for 1.8V curve
+
+values are 
+
+``` spice
+
+ngspice 37 -> 
+x0 = 0.780208, y0 = 1.69149
+
+x0 = 0.980208, y0 = 0.112766
+
+```
+
+<img width="751" height="173" alt="image" src="https://github.com/user-attachments/assets/f91243fa-f9a3-4d91-887a-c4787a64d466" />
 
 
 </details>
@@ -940,6 +962,75 @@ run spice simulation
 
 - L4 Conclusion
 
-- L5 Sky130 Device Variation Labs
+- **L5 Sky130 Device Variation Labs**
+
+  devicevariation is final lab:
+
+  spice file we use is "day5_inv_devicevariation_wp7_wn042.spice"
+
+``` spice
+
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=7 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+
+
+```
+
+run sumulation:
+
+<img width="1120" height="882" alt="image" src="https://github.com/user-attachments/assets/a570d2ea-20f7-4945-8bfc-a3428f7444a9" />
+
+
+plot out vs in
+
+<img width="1195" height="985" alt="image" src="https://github.com/user-attachments/assets/2f20e11e-34ec-4680-91c8-0474558aa932" />
+
+find switching threshold value
+
+<img width="1168" height="1005" alt="image" src="https://github.com/user-attachments/assets/02219237-fd17-497f-813f-c128325d9cd8" />
+
+x/y value will be: 
+
+x0 = 0.987945, y0 = 0.990417
+
+Switching threshold is around 80mV
+
+
+
+
+
+
+
 
 </details>
