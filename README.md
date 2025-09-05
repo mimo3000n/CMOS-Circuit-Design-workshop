@@ -836,11 +836,18 @@ run simulation:
 
 now "plot out vs in"in ngspice
 
+<img width="1204" height="834" alt="image" src="https://github.com/user-attachments/assets/1513c007-65ad-4fe3-b896-c4f6ae027403" />
+
 ngspice 36 -> plot out vs in
 ngspice 37 -> 
+
+<img width="1476" height="911" alt="image" src="https://github.com/user-attachments/assets/b9b55f38-1dcb-4e5f-8188-2526db5aa198" />
+
 x0 = 0.777333, y0 = 1.6975
 
 x0 = 0.977333, y0 = 0.1075
+
+
 
 
 for noisemargin high we have to calculate 
@@ -850,11 +857,6 @@ for noisemargin high we have to calculate
 noisemargin low will be:
 
 0.777 - 0.1075 = 0.6695 V
-
-
-
-
-
 
 
 </details>
