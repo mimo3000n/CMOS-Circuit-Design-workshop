@@ -1031,6 +1031,11 @@ Switching threshold is around 80mV
 
 
 
-
-
 </details>
+
+------------------------------------------------------------
+### Acknowledgments
+
+- #### Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+
+
